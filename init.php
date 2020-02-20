@@ -18,5 +18,4 @@
 
 
 
-
-     if(!isset($NavCustomer)){ include $temp . 'NavCustomer.php';}
+  //   if(!isset($navbar)){ include $temp . 'NavCustomer.php';}

@@ -98,18 +98,43 @@ body{
 =============== end login page ================
 ===============================================*/
 /*=============================================
-============ start cerate acount ==============
+============ start sign up ==============
 ===============================================*/
 
 
+.signup{
+	margin: 200px auto;
+    background-color: #Fff;
+    border-radius: 0.75em;
+    color: #555555;
+    padding: 30px;
+    text-align: left;
+}
+.signup label{
+	margin-bottom: 15px;
+    font-weight: bold;
+}
 
+
+.signup .form-control{
+	height: 47px;
+}
+.signup .register{
+
+	border-radius: 10px;
+    height: 53px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
 
 /*=============================================
-=============== end cerate acount =============
+=============== end sign up ===================
 ===============================================*/
 /*=============================================
 ============ start nav customer ===============
 ===============================================*/
+
+
 
 
 
@@ -124,84 +149,21 @@ body{
 
 
 
+
 /*=============================================
 =============== end nav maneger ===============
 ===============================================*/
-
-
 /*=============================================
 ============ start home page ================
 ===============================================*/
 /*
-.home{
-	display:grid;
-	grid-template-columns: repeat(6,1fr);
-	grid-auto-rows:minmax(200px,auto);
-	padding: 0px;
-	grid-template-areas: 
-	"act ads ord ord ord feat"
-	"act ads ord ord ord feat"
-	"act ads cont cont cont feat";
-
-}
-*/
-.container-fluid{
-	padding: 0px;
-
-
-}
-
-.activ_frinde{
-	border: 1px solid rgba(255, 3, 3, 0.774);
-
-	height: 750px;
-}
 
 
 
-.activ_frinde ul > li{
-	list-style: none;
-    padding: 2px;
-    text-align: end;
-    font-size: 13px;
-
-}
-
-.features{
-	border: 1px solid rgba(255, 3, 3, 0.774);
-	height: 800px;
-}
-
-.ads{
-	border: 1px solid rgba(255, 3, 3, 0.774);
-	height:600px;
-	padding: 0;
-
-}
-
-.order{
-	border: 1px solid rgba(255, 3, 3, 0.774);
-	height: 100px;
-	overflow: auto;
-}
 
 
-.content{
-	border: 1px solid rgba(255, 3, 3, 0.774);
-	border-bottom: none;
-	padding: 25px;
-	padding-top: 0;
-	height: auto;
-}
 
 
-.posts .post{
-	border: 1px solid rgba(255, 3, 3, 0.774);
-	height: 300px;
-	margin:20px 0 25px ;
-}
-
-	
 
 /*=============================================
 =============== end home page ===============
