@@ -4,7 +4,11 @@
     include  $temp . 'heder.php'; ?>
 
 
-
+    echo "
+    karim : hello islame?
+    islame: 
+    
+    ";
 
 
 
