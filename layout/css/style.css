@@ -76,15 +76,15 @@ body{
 .labels span a{
 	text-decoration: none;
 }
-.form-control{
+.inner-login .form-control{
 	height: 50px;
 	margin-bottom: 20px;
     border-radius: 0.75rem;
 }
-.form-control.field{
+.inner-login .form-control.field{
 		background-color: #f7f7f7;
 }
-.form-control.button{
+.inner-login .form-control.button{
 	background-color: #333;
 	margin-bottom: 50px;
 }
