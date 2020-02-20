@@ -1,5 +1,55 @@
 <?php
-	include "init.php";
+
+	session_start();
+
+	include "init.php"; // include the heder.. etc.
+
+	if (isset($_session['email']) AND isset($session['pass'])) {
+		header('location:index.php');
+		exit();	
+	}
+
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+			$email	 	  = $_POST['email'];
+			$password	  = $_POST['pass'];
+			$hashedpass = sha1($password);
+		
+		$stmt = $con->prepare("SELECT 
+									email , password 
+							   FROM 
+							   		users 
+							   WHERE 
+							   		email = ? 
+							   AND 
+									password = ? ");
+									   
+		$stmt->execute(array($email,$hashedpass));
+		$count= $stmt->rowCount();
+
+		if($count > 0 ) {
+
+			$_SESSION['email'] = $email;
+			$_SESSION['pass'] = $hashedpass;
+
+			header('location: index.php');
+			exit();
+		}
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 <div class="login">
 	<div class="outer-login">
@@ -12,11 +62,11 @@
 	</div>
 	<div class="inner-login">
 	<form action = '' method="POST"> 	<!--Alert !!  Put The Method In ACTION  -->
-		<label class="label labels">Username</label>
-		<input  class='form-control field' type="text" name="username" autocomplete="off" required="required">
+		<label class="label labels">Email</label>
+		<input  class='form-control field' type="text" name="email" autocomplete="off" required="required">
 	
 		<label class="label labels">Password <span><a href="">Forget?</a></span></label>
-		<input class='form-control field'type="password" name="password" autocomplete="off" required="required">
+		<input class='form-control field'type="password" name="pass" autocomplete="off" required="required">
 	
 		<input class='form-control btn btn-primary button' type="submit" name="signin"value='Sign In'>
 	</form>
