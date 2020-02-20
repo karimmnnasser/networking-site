@@ -6,6 +6,7 @@
 
     echo "
     karim : hello islame?
+    karim : this just testing?
     islame: 
     
     ";
