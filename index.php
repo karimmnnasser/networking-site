@@ -10,6 +10,7 @@
     islame: 
     
     ";
+    echo "test";
 
 
 
