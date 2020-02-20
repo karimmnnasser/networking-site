@@ -1,7 +1,7 @@
 <?php
-
 	session_start();
-	$NoNavbar = "";
+	$Nonavbar = "";
+	
 	include "init.php"; // include the heder.. etc.
 
 	if (isset($_session['email']) AND isset($session['pass'])) {
