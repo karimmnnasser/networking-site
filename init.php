@@ -18,4 +18,4 @@
 
 
 
-  if(!isset($navbar)){ include $temp . 'navbar.php';}
+  if(!isset($Nonavbar)){ include $temp . 'navbar.php';}

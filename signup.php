@@ -1,6 +1,6 @@
 <?php
     include "init.php";
-
+    $NoNavbar = " ";
 
 // Check If User Coming From HTTP Post Request
 

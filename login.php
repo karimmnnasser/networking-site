@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-
+	$NoNavbar = "";
 	include "init.php"; // include the heder.. etc.
 
 	if (isset($_session['email']) AND isset($session['pass'])) {
@@ -71,7 +71,7 @@
 		<input class='form-control btn btn-primary button' type="submit" name="signin"value='Sign In'>
 	</form>
 	
-	<p>Not a member?<a href="signin.php">Signupnow</a></p>
+	<p>Not a member?<a href="signup.php">Signupnow</a></p>
 
 	<!-- signin.php is the page where we will make a register -->
 	</div>
