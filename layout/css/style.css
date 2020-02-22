@@ -4,20 +4,19 @@ body{
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-color: #F6F8FA;
 }
-<<<<<<< HEAD
 .vl {
-    border: 1px solid black;
+    border: 1px solid #238bfa;
     height: 30px;
 	margin: 9px 7px 9px;
 }
 .circle-img{
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	border-radius: 50%;
 }
-=======
->>>>>>> 39ab25e704690e13666c785ab262c0dce40483ab
+
 /*=============================================
 ============ start login page =================
 ===============================================*/
@@ -106,7 +105,6 @@ body{
 .login p a{
 		font-size: 13px;
 
-}
 /* End Inner Login Form */
 
 /*=============================================
