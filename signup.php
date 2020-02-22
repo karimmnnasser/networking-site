@@ -116,12 +116,12 @@
 ?>
 
 
-<div class="container-fluid">
-
+<div class="container-fluid overlay">
+    <!--
     <div class="svg">
-       <!-- <img src="layoutimgs/social.jpg" alt="this is image">-->
+       <img src="layout/imgs/test.png" alt="this is image">
     </div>
-
+-->
     <form class="col-lg-5 col-sm-10 col-md-8 offset-lg-6 signup" action="<?php echo $_SERVER['PHP_SELF'] ?>" 
           method="post">
 

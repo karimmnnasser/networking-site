@@ -1,8 +1,10 @@
 
 body{
-	background-color: #F6F8FA;
+	background-image: url(../imgs/test3.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-
 /*=============================================
 ============ start login page =================
 ===============================================*/
@@ -100,6 +102,9 @@ body{
 /*=============================================
 ============ start sign up ==============
 ===============================================*/
+.overlay{
+	background-color: #00000091;
+}
 
 
 .signup{
@@ -108,7 +113,7 @@ body{
     color: #555555;
     padding: 30px;
     margin: 90px auto;
-    box-shadow: 1px 3px 8px 1px rgb(191, 189, 189);
+	box-shadow: 1px 1px 4px 1px rgb(53, 52, 52);
 }
 
 .signup input{
