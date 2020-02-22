@@ -2,7 +2,16 @@
 body{
 	background-color: #F6F8FA;
 }
-
+.vl {
+    border: 1px solid black;
+    height: 30px;
+	margin: 9px 7px 9px;
+}
+.circle-img{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
 /*=============================================
 ============ start login page =================
 ===============================================*/
