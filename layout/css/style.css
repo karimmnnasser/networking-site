@@ -107,7 +107,7 @@ body{
     border-radius: 0.75em;
     color: #555555;
     padding: 30px;
-    margin-top: 90px;
+    margin: 90px auto;
     box-shadow: 1px 3px 8px 1px rgb(191, 189, 189);
 }
 
