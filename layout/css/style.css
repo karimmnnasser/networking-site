@@ -105,6 +105,11 @@ body{
 .login p a{
 		font-size: 13px;
 }
+
+
+
+
+
 /* End Inner Login Form */
 
 /*=============================================
@@ -158,6 +163,14 @@ body{
 
 .signup .first_last{
 	margin-bottom: 13px;
+}
+
+
+.signup .alert_formErrors{
+	color: #e43737;
+    font-size: 14px;
+    padding-left: 11px;
+
 }
 /*=============================================
 =============== end sign up ===================
