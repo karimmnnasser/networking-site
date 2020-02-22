@@ -161,14 +161,15 @@
             </div>
 
             <div class="type col-12">
-
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline1" name="mail" class="custom-control-input" value="mail">
-                    <label class="custom-control-label" for="customRadioInline1">male</label>
+                  <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
+                  <label class="custom-control-label" for="defaultGroupExample1">Male</label>
                 </div>
+
+                <!-- Group of default radios - option 2 -->
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline2" name="female" class="custom-control-input" value="female">
-                    <label class="custom-control-label" for="customRadioInline2">female</label>
+                  <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios">
+                  <label class="custom-control-label" for="defaultGroupExample2">Female</label>
                 </div>
             </div>
             <button type="submit" class="register col-4- btn btn-dark btn-block mt-4"> Register </button>
