@@ -1,7 +1,6 @@
 
 body{
 	background-color: #F6F8FA;
-	text-align: center;
 }
 
 /*=============================================
@@ -13,7 +12,8 @@ body{
 	margin:200px auto;
 	background-color: #Fff;
 	border-radius: 0.75em;
-	color: #555555
+	color: #555555;
+	text-align:center;
 }
 /* Start Outer Login Form */
 .signin-header{
@@ -103,30 +103,46 @@ body{
 
 
 .signup{
-	margin: 200px auto;
     background-color: #Fff;
     border-radius: 0.75em;
     color: #555555;
     padding: 30px;
-    text-align: left;
-}
-.signup label{
-	margin-bottom: 15px;
-    font-weight: bold;
+    margin-top: 90px;
+    box-shadow: 1px 3px 8px 1px rgb(191, 189, 189);
 }
 
+.signup input{
+	margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 13px;
+}
 
 .signup .form-control{
-	height: 47px;
+	height: 45px;
 }
-.signup .register{
 
+.signup .register{
 	border-radius: 10px;
     height: 53px;
     font-size: 22px;
     letter-spacing: 1px;
 }
 
+.signup .duble{
+	margin: 20px 0px 50px;
+}
+
+.signup .duble > button{
+	border: 1px solid #c7b6b6;
+}
+
+.signup .duble button:last-child{
+    border-left: unset;
+}
+
+.signup .first_last{
+	margin-bottom: 13px;
+}
 /*=============================================
 =============== end sign up ===================
 ===============================================*/

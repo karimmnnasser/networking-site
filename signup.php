@@ -115,45 +115,49 @@
 
 ?>
 
-<div class="container">
-    
-    <form class="col-6 signup" action="<?php echo $_SERVER['PHP_SELF'] ?>" 
+
+<div class="container-fluid">
+
+    <div class="svg">
+       <!-- <img src="layoutimgs/social.jpg" alt="this is image">-->
+    </div>
+
+    <form class="col-lg-5 col-sm-10 col-md-8 offset-lg-6 signup" action="<?php echo $_SERVER['PHP_SELF'] ?>" 
           method="post">
 
-          <h2 class="text-center mb-5 mt-2"> Create your account </h2>
+          <div class="duble row">
+          <button class=" col-6 btn btn-outline-dark btn-lg">Sign Up</button>
+          <button class=" col-6 btn btn-outline-dark btn-lg">Login</button>
+          </div>
 
-        <div class="row ">
-
+        <div class="row first_last">
             <div class="col">
-                <label>First Name</label>
-                <input type="text" class="form-control" name="first" placeholder="First name" autocomplete="off" required="required">
+                
+                <input type="text" class="form-control" name="first" placeholder="First Name" autocomplete="off" required="required">
             </div>
             <div class="col">
-                <label>Last Name</label>
-                <input type="text" name="last" class="form-control" placeholder="Last name" autocomplete="off" required="required">
+                <input type="text" name="last" class="form-control" placeholder="Last Name" autocomplete="off" required="required">
             </div>
         </div>
 
 
         <div class="form-row">
             <div class="form-group col-12">
-                <label>Email</label>
-                <input type="email" name="email" class="form-control" placeholder="enter your email">
+                
+                <input type="email" name="email" class="form-control" placeholder="Email">
             </div>
             <div class="form-group col-12">
-                <label>Password</label>
-                <input type="password" name="pass" class="form-control" placeholder="enter your password"autocomplete="off" required="required">
+            
+                <input type="password" name="pass" class="form-control" placeholder="Password"autocomplete="off" required="required">
             </div>
             <div class="form-group col-12">
-                <label>Re-Password</label>
-                <input type="password" name="re_pass" class="form-control" placeholder="enter your password"autocomplete="off" required="required">
+                <input type="password" name="re_pass" class="form-control" placeholder="Re - Password"autocomplete="off" required="required">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-12">
-                <label>Country</label>
-                <input type="text" name="country" class="form-control">
+                <input type="text" name="country" placeholder="Country" class="form-control">
             </div>
 
             <div class="type col-12">
@@ -171,5 +175,7 @@
             
     </form>
  </div>
+
+
 
 <?php include $temp . "footer.php"; ?>

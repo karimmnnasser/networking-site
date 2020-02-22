@@ -5,6 +5,7 @@
 
 	$css  = "layout/css/"; 				// Css Directory
 	$js   = "layout/js/"; 				// Js Directory
+	$img  = "layout/imgs/"; 				// img Directory
 
 	$temp = "includes/templates/";		 // Template Directory
 	$lang = "includes/Languages/";	 	// Language Directory
