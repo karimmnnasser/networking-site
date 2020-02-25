@@ -94,111 +94,131 @@
     
 ?>
 
-
-<div class="container">
+<div class="forms">
+  <div class="container">
+    <div class="bt">
+        <div class="duble row">
+          <button class=" col-6 btn btn-outline-dark btn-lg active" data-class="signup">Sign Up</button>
+          <button class=" col-6 btn btn-outline-dark btn-lg" data-class="Log">Login</button>
+        </div>
+    </div>
     <form class="col-lg-5 col-md-8 col-sm-9 col-xs-12 signup" action="<?php echo $_SERVER['PHP_SELF'] ?>"  method="post" name="signup">
-          <div class="duble row">
-          <button class=" col-6 btn btn-outline-dark btn-lg">Sign Up</button>
-          <button class=" col-6 btn btn-outline-dark btn-lg">Login</button>
+        <div class="padd">
+          <div class="row first_last">
+              <div class="col">
+                  <input type="text" class="form-control" name="first" placeholder="First Name" autocomplete="off" required="required">
+                   
+                  <?php
+                  if(isset($formErrors["firstErrors"])){
+                      echo '<div class="alert_formErrors">'.$formErrors["firstErrors"].'</div>';
+                    }
+                    ?>
+
+              </div>
+              <div class="col">
+                  <input type="text" name="last" class="form-control" placeholder="Last Name" autocomplete="off" required="required">
+
+                  <?php
+                  if(isset($formErrors["lastErrors"])){
+                      echo '<div class="alert_formErrors">'.$formErrors["lastErrors"].'</div>';
+                   }?>
+
+              </div>
           </div>
 
-        <div class="padd">
 
-        <div class="row first_last">
-            <div class="col">
-                <input type="text" class="form-control" name="first" placeholder="First Name" autocomplete="off" required="required">
-                 
-                <?php
-                if(isset($formErrors["firstErrors"])){
-                    echo '<div class="alert_formErrors">'.$formErrors["firstErrors"].'</div>';
-                  }
-                  ?>
+          <div class="form-row">
+              <div class="form-group col-12">
+                  <input type="email" name="email" class="form-control" placeholder="E-Mail">
+                  <?php
+                  if(isset($formErrors["emailErrors"]) ||  isset($formErrors["email_her_Errors"])){
+                      echo ' <div class="alert_formErrors">' . $formErrors["emailErrors"].'</div>';
+                      echo ' <div class="alert_formErrors">' . $formErrors["email_her_Errors"] .'</div>';
+                   }?>
 
-            </div>
-            <div class="col">
-                <input type="text" name="last" class="form-control" placeholder="Last Name" autocomplete="off" required="required">
+              </div>
+              <div class="form-group col-12">
+                  <input type="password" name="pass" class="form-control" placeholder="Password"autocomplete="off" required="required">
+              </div>
+              <div class="form-group col-12">
+                  <input type="password" name="re_pass" class="form-control" placeholder="Re - Password"autocomplete="off" required="required">
+                  <?php
+                  if(isset($formErrors["passErrors"]) || isset($formErrors["match_passErrors"])){
+                      echo ' <div class="alert_formErrors">' . $formErrors["passErrors"] . '</div>';
+                      echo ' <div class="alert_formErrors">' . $formErrors["match_passErrors"] . '</div>';
+                    }?>
+                   
+              </div>
+          </div>
 
-                <?php
-                if(isset($formErrors["lastErrors"])){
-                    echo '<div class="alert_formErrors">'.$formErrors["lastErrors"].'</div>';
-                 }?>
-
-            </div>
-        </div>
-
-
-        <div class="form-row">
-            <div class="form-group col-12">
-                <input type="email" name="email" class="form-control" placeholder="E-Mail">
-                <?php
-                if(isset($formErrors["emailErrors"]) ||  isset($formErrors["email_her_Errors"])){
-                    echo ' <div class="alert_formErrors">' . $formErrors["emailErrors"].'</div>';
-                    echo ' <div class="alert_formErrors">' . $formErrors["email_her_Errors"] .'</div>';
-                 }?>
-
-            </div>
-            <div class="form-group col-12">
-                <input type="password" name="pass" class="form-control" placeholder="Password"autocomplete="off" required="required">
-            </div>
-            <div class="form-group col-12">
-                <input type="password" name="re_pass" class="form-control" placeholder="Re - Password"autocomplete="off" required="required">
-                <?php
-                if(isset($formErrors["passErrors"]) || isset($formErrors["match_passErrors"])){
-                    echo ' <div class="alert_formErrors">' . $formErrors["passErrors"] . '</div>';
-                    echo ' <div class="alert_formErrors">' . $formErrors["match_passErrors"] . '</div>';
+          <div class="form-row">
+              <div class="form-group col-12">
+                  <input type="text" name="country" placeholder="Country" class="form-control">
+                  <?php
+                  if(isset($formErrors["coutryErrors"])){
+                      echo '<div class="alert_formErrors">' . $formErrors["coutryErrors"] . '</div>';
+                    } else{
+                      echo " ";
                   }?>
-                 
+
+              </div>
+              <div class="type col-12">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="gender" value="male">
+                    <label class="custom-control-label" for="defaultGroupExample1">Male</label>
+                  </div>
+
+                  <!-- Group of default radios - option 2 -->
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="gender" value="female">
+                    <label class="custom-control-label" for="defaultGroupExample2">Female</label>
+                  </div>
+                  <?php
+                  if(isset($formErrors["genderErrors"])){
+                      echo ' <div class="alert_formErrors">' . $formErrors["genderErrors"] . '</div>';
+                    }
+                    ?>
+              </div>
+              <button type="submit" name="submit" class="register col-4- btn btn-dark btn-block mt-4"> Create Account </button>
             </div>
+         </div>   <!-- container-fluid -->
+      </form>
+   <form class="Log col-lg-5 col-md-8 col-sm-9 col-xs-12">
+      <div class="login">
+        <div class="outer-login">
+          <div class="signin-social">
+            <span class="btn btn-primary "><a href="https://www.facebook.com/">Facebook</a></span>
+            <span class="btn btn-default"><a href="https://www.google.com/">Google</a></span>
+          </div>
+
         </div>
-
-        <div class="form-row">
-            <div class="form-group col-12">
-                <input type="text" name="country" placeholder="Country" class="form-control">
-                <?php
-                if(isset($formErrors["coutryErrors"])){
-                    echo '<div class="alert_formErrors">' . $formErrors["coutryErrors"] . '</div>';
-                  } else{
-                    echo " ";
-                }?>
-
-            </div>
-            <div class="type col-12">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="gender" value="male">
-                  <label class="custom-control-label" for="defaultGroupExample1">Male</label>
-                </div>
-
-                <!-- Group of default radios - option 2 -->
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="gender" value="female">
-                  <label class="custom-control-label" for="defaultGroupExample2">Female</label>
-                </div>
-                <?php
-                if(isset($formErrors["genderErrors"])){
-                    echo ' <div class="alert_formErrors">' . $formErrors["genderErrors"] . '</div>';
-                  }
-                  ?>
-            </div>
-            <button type="submit" name="submit" class="register col-4- btn btn-dark btn-block mt-4"> Create Account </button>
-            </div>
-    </form>
-
- </div>   <!-- container-fluid -->
-
-    <!-- picture aside form login -->
+        <div class="inner-login">
+        <form action = 'login.php' method="POST">   <!--Alert !!  Put The Method In ACTION  -->
+          <label class="label labels">Email</label>
+          <input  class='form-control field' type="text" name="email" autocomplete="off" required="required">
         
+          <label class="label labels">Password <span><a href="">Forget?</a></span></label>
+          <input class='form-control field'type="password" name="pass" autocomplete="off" required="required">
+        
+          <input class='form-control btn btn-primary button' type="submit" name="signin"value='Sign In'>
+        </form>
+        
+        <p>Not a member?<a href="signup.php">Signupnow</a></p>
+
+        <!-- signin.php is the page where we will make a register -->
+      </div>
+  </div>
+  </form>
+    <!-- picture aside form login -->
     <div class="content">
-            <div class="imgs">
-                <img src="layout/imgs/testing.svg">
-            </div>
-    
-            <div class="text">
-            </div>
-    </div>    
-
-
-
-
+        <div class="imgs">
+            <img src="layout/imgs/testing.svg">
+        </div>
+        <div class="text">
+        </div>
+    </div>        
+  </div>
+</div>
 
 
 

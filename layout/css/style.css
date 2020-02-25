@@ -26,14 +26,25 @@ body{
 /*=============================================
 ============ start login page =================
 ===============================================*/
+.Log{
+	background-color: #Fff;
+    margin: 100px auto;
+    float: right;
+    padding: 0;
+    border-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: none;
+}
 .login{
-	width: 550px;
-	height: 550px;
-	margin:200px auto;
+	width: 462px;
+	margin:35px auto;
 	background-color: #Fff;
 	border-radius: 0.75em;
 	color: #555555;
 	text-align:center;
+	
+
 }
 /* Start Outer Login Form */
 .signin-header{
@@ -128,17 +139,32 @@ body{
 ===============================================*/
 
 .signup{
-    background-color: #Fff;
-    margin: 80px auto;
-    box-shadow: 1px 1px 17px 3px rgb(14, 37, 55);
+	background-color: #Fff;
+    margin: 100px auto;
     float: right;
     padding: 0;
-	border-radius: 30px;
+    border-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
-
-.signup .duble{
-	margin: 0 0 50px 0;
+.bt{
+    position: absolute;
+    width: 462px;
+    background-color: #Fff;
+    margin: auto;
+    margin-right: 0;
+    margin-top: 30px;
+    box-shadow: 1px 1px 17px 3px rgb(14, 37, 55);
+    padding: 0;
+    border-radius: 30px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    left: 0;
+    right: 205px;
+}
+.bt .duble{
+	margin: 0 0 0 0;
 	height: 70px;
 	padding: 0;	
 	box-sizing: border-box;
