@@ -28,7 +28,7 @@ body{
 ===============================================*/
 .Log{
 	background-color: #Fff;
-    margin: 100px auto;
+    margin: 0px auto;
     float: right;
     padding: 0;
     border-radius: 0;
@@ -140,7 +140,7 @@ body{
 
 .signup{
 	background-color: #Fff;
-    margin: 100px auto;
+    margin: 0 auto;
     float: right;
     padding: 0;
     border-radius: 0;
@@ -149,19 +149,16 @@ body{
 }
 
 .bt{
-    position: absolute;
-    width: 462px;
+   width: 463px;
     background-color: #Fff;
     margin: auto;
     margin-right: 0;
-    margin-top: 30px;
+    margin-top: 90px;
     box-shadow: 1px 1px 17px 3px rgb(14, 37, 55);
     padding: 0;
     border-radius: 30px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    left: 0;
-    right: 205px;
 }
 .bt .duble{
 	margin: 0 0 0 0;
@@ -250,7 +247,9 @@ body{
 	background-color: #152a42;
 
 }
-
+.imgs{
+    margin: -160px;
+}
 /*=============================================
 =============== end sign up ===================
 ===============================================*/
