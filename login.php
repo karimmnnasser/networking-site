@@ -36,7 +36,7 @@
 			exit();
 		}
 	}
-	
+?>	
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-?>
+
       <div class="container">
             <form class='LOG' action = 'login.php' method="POST">   <!--Alert !!  Put The Method In ACTION  -->
         <div class="signin-header"><h1>Sign In With</h1></div>
