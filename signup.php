@@ -4,9 +4,7 @@
 
 // Check If User Coming From HTTP Post Request
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        if(isset($_POST['submit'])){
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
             $first = $_POST['first'];
             $last = $_POST['last'];
@@ -19,14 +17,13 @@
             $country = $_POST['country'];
 
 
-            $formErrors = array();
+            $formErrors = array(); //array for errors
 
+            // vaidaiton input  from login
 
             if (isset($first)) {
             $filter = filter_var($first,FILTER_SANITIZE_STRING);
-
             if(strlen($filter) < 4 ){
-
                 $formErrors["firstErrors"] = 'First Name Must Be Larger Than 4 Characters';
             }}
 
@@ -39,38 +36,34 @@
 
             if(isset($email)){
             $filteremail = filter_var($email,FILTER_SANITIZE_EMAIL);
-
             if($filteremail != true ){
                 $formErrors["emailErrors"] = 'This Email Is Not Valid';
             }}
 
             if (isset($pass) && isset($re_pass)){
-
             if(empty($pass)){
                 $formErrors["passErrors"] = 'your password is empty';
             }
 
             if (sha1($pass) !== sha1($re_pass)){
-
                 $formErrors["match_passErrors"] = 'this password is not matched !';
-            } }
+            }}
            
-            if(isset($gender) AND empty($gender)){
-                $formErrors["genderErrors"] = 'input gender is requred';
-            }
+            if(isset($gender)){
+                if(empty($gender)){
+                    $formErrors["genderErrors"] = 'input gender is requred';
+                }
+            } 
 
-
-            if(empty($country)){
-
-            $formErrors["coutryErrors"] =  'countyt is empty !';
-
-            }
+            if(isset($country)){
+                if(empty($country)){
+                    $formErrors["coutryErrors"] =  'countyt is empty !';
+            }}
 
 
             if (empty($formErrors)){
 
                // Check If The email Exist In Database
-
                $stmt = $con->prepare('SELECT email FROM users WHERE email =? ');
                $stmt->execute(array($email));
                $count = $stmt->rowCount();
@@ -98,66 +91,51 @@
            } 
         }
     }
-}
-
-/*
-    if(!empty($formErrors)){
-
-    foreach ($formErrors as $error) {
-
-    echo ' <div class="alert alert-danger">' . $error . '</div>';
-  }
-}
-*/
+    
 ?>
 
 
-<div class="container-fluid overlay">
-    <form class="col-lg-5 col-sm-10 col-md-8 offset-lg-6 signup" action="<?php echo $_SERVER['PHP_SELF'] ?>" 
-          method="post" name="signup">
-
+<div class="container">
+    <form class="col-lg-5 col-md-8 col-sm-9 col-xs-12 signup" action="<?php echo $_SERVER['PHP_SELF'] ?>"  method="post" name="signup">
           <div class="duble row">
           <button class=" col-6 btn btn-outline-dark btn-lg">Sign Up</button>
           <button class=" col-6 btn btn-outline-dark btn-lg">Login</button>
           </div>
+
+        <div class="padd">
 
         <div class="row first_last">
             <div class="col">
                 <input type="text" class="form-control" name="first" placeholder="First Name" autocomplete="off" required="required">
                  
                 <?php
-                if(!empty($formErrors)){
-                    foreach ($formErrors as $error => $value ) {
-                    echo ' <div class="alert_formErrors">' . $error["firstErrors"] . '</div>';
-                 }
-            }
-        ?>
+                if(isset($formErrors["firstErrors"])){
+                    echo '<div class="alert_formErrors">'.$formErrors["firstErrors"].'</div>';
+                  }
+                  ?>
 
             </div>
             <div class="col">
                 <input type="text" name="last" class="form-control" placeholder="Last Name" autocomplete="off" required="required">
+
                 <?php
-                if(!empty($formErrors)){
-                    foreach ($formErrors as $error => $value ) {
-                    echo ' <div class="alert_formErrors">' . $error["lastErrors"] . '</div>';
-                 }
-            }
-        ?>
+                if(isset($formErrors["lastErrors"])){
+                    echo '<div class="alert_formErrors">'.$formErrors["lastErrors"].'</div>';
+                 }?>
+
             </div>
         </div>
 
 
         <div class="form-row">
             <div class="form-group col-12">
-                
                 <input type="email" name="email" class="form-control" placeholder="E-Mail">
                 <?php
-                if(!empty($formErrors)){
-                    foreach ($formErrors as $error => $value ) {
-                    echo ' <div class="alert_formErrors">' . $error["emailErrors"] . '</div>';
-                 }
-            }
-        ?>
+                if(isset($formErrors["emailErrors"]) ||  isset($formErrors["email_her_Errors"])){
+                    echo ' <div class="alert_formErrors">' . $formErrors["emailErrors"].'</div>';
+                    echo ' <div class="alert_formErrors">' . $formErrors["email_her_Errors"] .'</div>';
+                 }?>
+
             </div>
             <div class="form-group col-12">
                 <input type="password" name="pass" class="form-control" placeholder="Password"autocomplete="off" required="required">
@@ -165,27 +143,25 @@
             <div class="form-group col-12">
                 <input type="password" name="re_pass" class="form-control" placeholder="Re - Password"autocomplete="off" required="required">
                 <?php
-                if(!empty($formErrors)){
-                    foreach ($formErrors as $error => $value ) {
-                    echo ' <div class="alert_formErrors">' . $error["passErrors"] . '<br>' . $error["match_passErrors"] . '</div>';
-                 }
-            }
-        ?>
+                if(isset($formErrors["passErrors"]) || isset($formErrors["match_passErrors"])){
+                    echo ' <div class="alert_formErrors">' . $formErrors["passErrors"] . '</div>';
+                    echo ' <div class="alert_formErrors">' . $formErrors["match_passErrors"] . '</div>';
+                  }?>
+                 
             </div>
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-12">
+            <div class="form-group col-12">
                 <input type="text" name="country" placeholder="Country" class="form-control">
                 <?php
-                if(!empty($formErrors)){
-                    foreach ($formErrors as $error => $value ) {
-                    echo ' <div class="alert_formErrors">' . $error["coutryErrors"] . '</div>';
-                 }
-            }
-        ?>
-            </div>
+                if(isset($formErrors["coutryErrors"])){
+                    echo '<div class="alert_formErrors">' . $formErrors["coutryErrors"] . '</div>';
+                  } else{
+                    echo " ";
+                }?>
 
+            </div>
             <div class="type col-12">
                 <div class="custom-control custom-radio custom-control-inline">
                   <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="gender" value="male">
@@ -198,17 +174,31 @@
                   <label class="custom-control-label" for="defaultGroupExample2">Female</label>
                 </div>
                 <?php
-                if(!empty($formErrors)){
-                    foreach ($formErrors as $error => $value ) {
-                    echo ' <div class="alert_formErrors">' . $error["genderErrors"] . '</div>';
-                 }
-            }
-        ?>
+                if(isset($formErrors["genderErrors"])){
+                    echo ' <div class="alert_formErrors">' . $formErrors["genderErrors"] . '</div>';
+                  }
+                  ?>
             </div>
-            <button type="submit" name="submit" class="register col-4- btn btn-dark btn-block mt-4"> Register </button>
-            
+            <button type="submit" name="submit" class="register col-4- btn btn-dark btn-block mt-4"> Create Account </button>
+            </div>
     </form>
- </div>
+
+ </div>   <!-- container-fluid -->
+
+    <!-- picture aside form login -->
+        
+    <div class="content">
+            <div class="imgs">
+                <img src="layout/imgs/testing.svg">
+            </div>
+    
+            <div class="text">
+            </div>
+    </div>    
+
+
+
+
 
 
 
