@@ -2,7 +2,7 @@
 body{
 	background-color: #F6F8FA;
 	box-sizing: border-box;
-	/* Background-image: url(../imgs/testing2.svg); */
+	Background-image: url(../imgs/testing2.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -102,17 +102,17 @@ body{
 	margin: auto;
 	
 }
-.labels{
+.inner-login .labels{
 	float: left;
 	font-weight: bold;	
 	font-size: 16px;
 	color: #777
 
 }
-.labels span{
+.inner-login .labels span{
 	font-size: 13px;
 }
-.labels span a{
+.inner-login .labels span a{
 	text-decoration: none;
 }
 .inner-login .form-control{
@@ -265,9 +265,58 @@ body{
 ===============================================*/
 
 .checkEmail{
-	margin: 200px auto;
+    margin: 270px auto;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 30px -13px rgb(14, 37, 55);
+    float: right;
+    border-radius: 27px;
+    padding: 45px 80px 60px;
+    font-family: cursive;
 }
 
+.checkEmail input{
+	height: 40px;
+    border-radius: 10px;
+}
+
+.checkEmail .btn-checkEmail{
+	background-color: #152a42;
+    border: unset;
+    font-size: 23px;
+    border-radius: 10px;
+    color: white;
+}
+.checkEmail .btn-checkEmail:hover{
+	background-color: #fff;
+    border: 1px solid #152a42;
+    font-size: 23px;
+    border-radius: 10px;
+    color: #152a42;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #000;
+    background-color: #fff;
+    border-color: #152a42;
+}
+
+
+
+
+.checkEmail label {
+    color: #4e4e4e;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0 0 30px;
+}
+
+.checkEmailImg .imgs img {
+    width: 971px;
+    height: 757px;
+    position: absolute;
+    left: -270px;
+    top: 80px;
+}
 
 
 /*=============================================
