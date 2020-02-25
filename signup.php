@@ -127,6 +127,7 @@
           </div>
 
 
+<<<<<<< HEAD
           <div class="form-row">
               <div class="form-group col-12">
                   <input type="email" name="email" class="form-control" placeholder="E-Mail">
@@ -160,6 +161,44 @@
                     } else{
                       echo " ";
                   }?>
+=======
+        <div class="form-row">
+            <div class="form-group col-12">
+                <input type="email" name="email" class="form-control" placeholder="E-Mail">
+                <?php
+                if(isset($formErrors["emailErrors"])){
+                    echo ' <div class="alert_formErrors">' . $formErrors["emailErrors"].'</div>';
+                    
+                 }elseif (isset($formErrors["email_her_Errors"])){
+                    echo ' <div class="alert_formErrors">' . $formErrors["email_her_Errors"] .'</div>';
+                 }
+                 ?>
+
+            </div>
+            <div class="form-group col-12">
+                <input type="password" name="pass" class="form-control" placeholder="Password"autocomplete="off" required="required">
+            </div>
+            <div class="form-group col-12">
+                <input type="password" name="re_pass" class="form-control" placeholder="Re - Password"autocomplete="off" required="required">
+                <?php
+                if(isset($formErrors["passErrors"])){
+                    echo ' <div class="alert_formErrors">' . $formErrors["passErrors"] . '</div>';
+
+                  }elseif(isset($formErrors["match_passErrors"])){
+                    echo ' <div class="alert_formErrors">' . $formErrors["match_passErrors"] . '</div>';
+                  }?>
+                 
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-12">
+                <input type="text" name="country" placeholder="Country" class="form-control">
+                <?php
+                if(isset($formErrors["coutryErrors"])){
+                    echo '<div class="alert_formErrors">' . $formErrors["coutryErrors"] . '</div>';
+                  }?>
+>>>>>>> fixed
 
               </div>
               <div class="type col-12">
