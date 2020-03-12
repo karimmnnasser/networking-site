@@ -11,6 +11,8 @@
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+		if (isset($_POST['login'])) {
+
 			$email	 	  = $_POST['email'];
 			$password	  = $_POST['pass'];
 			$hashedpass = sha1($password);
@@ -36,6 +38,7 @@
 			exit();
 		}
 	}
+}
 ?>	
 
 
