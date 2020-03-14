@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="<?php echo $css; ?>all.min.css"> 
 	<!-- coustom css -->
 	<link rel="stylesheet" href="<?php echo $css; ?>style.css">
+
+	<!-- font-family: 'Righteous', cursive; -->
+	<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
 

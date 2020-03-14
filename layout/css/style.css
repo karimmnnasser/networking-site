@@ -9,12 +9,13 @@ body{
 /*============ Start nav customer ===============*/
 
 .setting_navbar {
-	background-color: #152a42 !important;
+	background-color: #00000026 !important;
 	border-radius: unset;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 10;
 }
 
 .circle-img{
@@ -25,9 +26,6 @@ body{
 
 /*============ Start sign up page =================*/
 
-#login{
-	
-}
 
 /* shadow with toggle signup and login  */
 .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
@@ -76,7 +74,6 @@ body{
 	border: 0;
 }
 
-
 .toggle-sign-login .form-control {
 	border: unset;
     border-bottom: 2px solid #d4d4d4;
@@ -93,7 +90,25 @@ body{
 }
 
 .active{
-	background-color:var(--main_color) !important;
+	background-color: #656bff;
+    color: #fff;
+}
+
+.btn-sign,
+.btn-check,
+.btn-login{
+	background-color: #656bff !important;
+    color: #fff !important;
+}
+
+.btn:hover {
+    background-color: #3a3c75 !important;
+    color: #fff !important;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+     box-shadow:unset;
 }
 
 /*============ Start sign up page =================*/
@@ -114,22 +129,16 @@ body{
 /*============ Start Check email page =================*/
 
 .check-email{
-	background-color: #ccc;
-	padding: 13px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	background-color: #fff;
+    padding: 13px;
+    position: absolute;
+    top: 50%;
+	left: 0;
+	z-index: 10;
 }
 
-.hidden{
-	display: none;
-}
 
 /*============ Start canvas email page =================*/
-
-/* ---- reset ---- */
-
 
 
 .background-color{
@@ -145,11 +154,53 @@ canvas {
 	vertical-align: bottom;
   }
   
-  /* ---- particles.js container ---- */
-  
   #particles-js {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	z-index: 5;
   }
+
+
+/*============ Start alert error =================*/  
+
+.alert_formErrors:first-child {
+    color: #c30b0b;
+    border-left: 2px solid #960909;
+    padding-left: 10px;
+    margin-top: -15px;
+}
+.alert_formErrors {
+    color: #c30b0b;
+    border-left: 2px solid #960909;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+
+
+.testt{
+	margin: 60px;
+	font-size: 60px;
+	color: #000;
+}
+
+
+
+
+.animation-text{
+	margin: 80px auto;
+	color: #fff;
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Righteous', cursive;
+}
+
+.animation-text span{
+	margin: 80px auto;
+	color: #656bff;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Righteous', cursive;
+}
+
